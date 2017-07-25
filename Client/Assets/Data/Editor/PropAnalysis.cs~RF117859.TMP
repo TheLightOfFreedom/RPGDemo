@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using UnityEditor;
+using UnityEngine.TestTools;
+using NUnit.Framework;
+using System.Collections;
+using System.IO;
+using OfficeOpenXml;
+
+public class PropAnalysis {
+
+    [Test]
+    public void PropAnalysisSimplePasses() {
+        var filePath = Application.dataPath + "/Data/Excels/TC.xlsx";
+        FileInfo existingFile = new FileInfo(filePath);
+        if (existingFile.Exists) {
+            using (ExcelPackage package = new ExcelPackage(existingFile)) {
+                // get the first worksheet in the workbook
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                for (var row = 5; row < 8; row++) {
+
+                }
+            }
+        }
+    }
+
+	
+}

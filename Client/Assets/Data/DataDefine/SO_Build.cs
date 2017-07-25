@@ -22,4 +22,6 @@ public class SO_Build : ScriptableObject {
     [Exl] public string Icon;
     [Exl] public bool canMove;
     [Exl] public bool canRemove;
+
+    public SO_Build item;
 }
